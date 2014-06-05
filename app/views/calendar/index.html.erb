@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    
+
+     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS de Bootstrap -->
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+ 
+    <!-- librerías opcionales que activan el soporte de HTML5 para IE8 -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body  >
+
+
+  	<div class="navbar navbar-default navbar-fixed-top">
+  		<div class="container">
+  			<div class="navbar-header">
+          <a href="quinielas" class="navbar-brand">Home</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main"></button>
+           <a class="navbar-brand" href="#"> <%=image_tag("banderas/mundial.jpg", :alt=>"image", :width=>150, :heigth=>80 )%> </a>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="navbar-collapse" id="nabvar-main">
+            <ul class="nav navbar-nav">
+              <li class="dropdown">
+                <a class="dropdown-toggle"  data-toggle="dropdown" href="#" id="themes">
+                  CALENDARIO
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="themes">
+                  <li>
+                    <a href="Fase Grupos">Fase Grupos</a>
+                  </li>
+                  <li >
+                    <a href="Octavos">Octavos</a>
+                  </li>
+                  <li>
+                    <a href="Cuartos">Cuartos</a>
+                  </li>
+                  <li>
+                    <a href="Semifinal">Semi-Final</a>
+                  </li>
+                  <li class="divider"></li>
+                  <li>
+                    <a href="Final">Final</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="Noticias">NOTICIAS</a>
+              </li>
+              <li>
+                <a href="Ayuda">AYUDA</a>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li class="active">
+                <a href="Invitar" target="_blank">INVITAR</a> 
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= image_tag("banderas/mexico.jpg", :alt=>"mexico", :width=>25, :heigth=>25 )%>Juanito&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <b class="caret"></b></a>
+              <ul class="dropdown-menu" arial-labelledby="themens">
+                <li>
+                  <a href="Quiniela1">Quiniela 1</a>
+                </li>
+                <li>
+                  <a href="Qiniela2">Quiniela 2</a>
+                </li>
+                <li>
+                  <a href="Quinielaempresa">Quniela Empresa</a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                  <a href="Nueva">Nueva quiniela</a>
+                </ul>
+            </ul>
+            </div>
+          </div>
+        </div><br><br><br><br><br>
+      <div class="row">
+        <div class="col-sm-4 col-sm-2 ">
+         <div class="pull-left">
+          <ul class="list-group ">
+            <a href="#" class="list-group-item active">
+              <strong>JORNADAS</strong> &nbsp<%= image_tag("banderas/balon.jpg", :alt=>"holanda", :width=>55, :heigth=>55)%>
+            </a>
+            <a href="#" class="list-group-item">JORNADA 1</a>
+            <a href="#" class="list-group-item">JORNADA 2 </a>
+            <a href="#" class="list-group-item">JORNADA 3</a>
+            <a href="#" class="list-group-item">SEMI-FINAL</a>
+            <a href="#" class="list-group-item">FINAL</a>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-5 col-sm-6">
+        <table class="table table-striped table-bordered table-condensed">
+          <thead>
+            <th>Hora</th>
+            <th>Local</th>
+            <th>Empate</th>
+            <th> &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp &nbsp &nbspVisita</th>
+          </thead>
+          
+            <p class="text-center">Grupo A</p>
+            <p class="text-right">Fecha:12/7/14</p>
+          <tbody>
+            <tr><td>12 JUN-17:00 hr</td><td><strong>Brasil</strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<%= image_tag("banderas/brasil.jpg", :alt=>"mexico", :width=>24, :heigth=>24)%>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<label><input  type="radio" name="opciones2" id="opciones_2" value="opcion_2"checked></label></td>
+              <td><div class="radio pull-right">&nbsp&nbsp&nbsp<label>&nbsp&nbsp<input type="radio" name="opciones2" id="opciones_2" value="opcion_2" checked></label></div></td>
+              <td><strong>Croacia</strong>&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp<%= image_tag("banderas/croacia.jpg", :alt=>"croacaia", :width=>27, :heigth=>27)%>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<label><input type="radio"name ="opciones2" id="opcion_2"></lable></td></tr>
+               <tr><td>13:00 hr</td><td><strong>Mexico</strong> &nbsp&nbsp&nbsp&nbsp<%= image_tag("banderas/mexico.jpg", :alt=>"mexico", :width=>25, :heigt=>25)%><label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="radio" name="opciones5" id="opciones_2" value="opcion_2"checked></label></td><td><div class="radio pull-right">&nbsp&nbsp&nbsp&nbsp&nbsp<label><input type="radio" name="opciones5" id="opciones_2" value="opcion_2" checked> </label></div></td>
+                <td><strong>Camerun</strong> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<%= image_tag("banderas/camerun.jpg", :alt=>"camerun", :width=>25, :heigth=>25)%><label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="radio" name="opciones5" id="opcion_2" value="opcion_2" ></label></td></tr>
+                  <tr><td>21:00 hr</td><td><strong>Brasil</strong> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<%= image_tag("banderas/brasil.jpg", :alt=>"mexico", :width=>24, :heigth=>24)%>&nbsp<label>&nbsp&nbsp&nbsp&nbsp&nbsp<input type="radio" name="opciones6" id="opcion_3" value="opcion_3" checked> </label>  </td><td>  <div class="radio pull-right">&nbsp&nbsp&nbsp&nbsp&nbsp<label><input type="radio" name="opciones6" id="opcion_3" value="opcion_3" checked> </label></div></td><td><strong>Mexico</strong> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<%= image_tag("banderas/mexico.jpg", :alt=>"mexico", :width=>25, :heigt=>25)%> &nbsp<label>&nbsp&nbsp&nbsp&nbsp<input type="radio" name="opciones6" id="opcion_3" value="opcion_3" > </label></td></tr>
+                  <tr><td>00:00 hr</td><td><strong>Camerun</strong> &nbsp <%= image_tag("banderas/camerun.jpg", :alt=>"camerun", :width=>25, :heigth=>25)%> &nbsp<label>&nbsp&nbsp&nbsp<input type="radio" name="opciones7" id="opcion8" value="opcion8"checked> </label></td><td><div class="radio pull-right">&nbsp&nbsp&nbsp&nbsp&nbsp<label><input type="radio" name="opciones7" id="opcion8" value="opcion8"checked> </label></div></td><td><strong>Croacia</strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp<%= image_tag("banderas/croacia.jpg", :alt=>"croacaia", :width=>27, :heigth=>27)%>&nbsp&nbsp<label>&nbsp&nbsp&nbsp<input type="radio" name="opciones7" id="opcion8" value="opcion8">  </label></td>
+                  </tr><tr><td>22:00 hr</td><td><strong>Croacia</strong>&nbsp&nbsp&nbsp&nbsp&nbsp<%= image_tag("banderas/croacia.jpg", :alt=>"croacaia", :width=>27, :heigth=>27)%> &nbsp<label>&nbsp&nbsp&nbsp<input type="radio" name="opciones9" id="opcion_1" value="opcion_1" checked> </label></td><td><div class="radio pull-right"><label><input type="radio" name="opciones9" id="opcion_1" value="opcion_1" checked>&nbsp&nbsp&nbsp&nbsp&nbsp</label></div></td><td><strong>Mexico</strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <%= image_tag("banderas/mexico.jpg", :alt=>"mexico", :width=>25, :heigt=>25)%>&nbsp<label>&nbsp&nbsp&nbsp&nbsp<input type="radio" name="opciones9" id="opcion_1" value="opcion_1"> </label></td></tr>
+                </tbody>
+              </table>
+              <p class="text-left"><button type="button" class="btn btn-success">Jugar</button></p>
+            </div>
+      
+
+          <div class="row">
+            <div class="col-sm-3 col-sm-3 col-sm-3">
+              <ul class="list-group ">
+                <a href="#" class="list-group-item active">
+                  <strong>RESULTADOS AL MOMENTO</strong>&nbsp&nbsp&nbsp<%= image_tag("banderas/reloj.jpg", :alt=>"holanda", :width=>40, :heigth=>40)%>
+                </a>
+                <a href="#" class="list-group-item">Brasil&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp vs&nbsp&nbspMexico&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp1-1&nbsp&nbsp40"</a>
+                <a href="#" class="list-group-item">Holanda&nbsp&nbsp&nbspvs&nbsp&nbspMexico&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp2-1&nbsp&nbspFIN</a>
+                <a href="#" class="list-group-item">Croacia&nbsp&nbsp&nbsp vs&nbsp Brasil&nbsp &nbsp&nbsp &nbsp&nbsp&nbsp2-3&nbsp&nbspFIN</a>
+                <a href="#" class="list-group-item">Portugal&nbsp&nbsp vs&nbsp España&nbsp&nbsp&nbsp&nbsp 2-3&nbsp&nbsp83"</a>
+                <a href="#" class="list-group-item">Alemania&nbsp&nbspvs&nbspuruguay&nbsp&nbsp&nbsp&nbsp&nbsp2-2&nbsp&nbsp73"</a>
+                <a href="#" class="list-group-item">Italia&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspvs&nbspEcuador&nbsp&nbsp&nbsp&nbsp3-1&nbsp&nbspFIN</a>
+                <a href="#" class="list-group-item">Inglaterra&nbsp&nbspvs&nbspChile&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp2-3&nbsp&nbsp57"</a>
+                <a href="#" class="list-group-item">Mexico&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspvs&nbspCamerun&nbsp&nbsp&nbsp2-3&nbsp&nbspFIN</a>
+                <a href="#" class="list-group-item">Brazil&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspvs&nbspCroacia&nbsp&nbsp&nbsp&nbsp&nbsp2-3&nbsp&nbspFIN</a>
+                <a href="#" class="list-group-item">Portugal&nbsp&nbsp&nbsp&nbspvs Jamaica&nbsp&nbsp&nbsp&nbsp 2-3&nbsp&nbspFIN</a>
+              </ul>
+            </div>
+          </div>
+        
+      <script src="http://code.jquery.com/jquery.js"></script>
+    <!-- Todos los plugins JavaScript de Bootstrap (también puedes
+    incluir archivos JavaScript individuales de los únicos plugins que utilices) --><script src="js/bootstrap.min.js"></script>
+  </body>
+  </html>
