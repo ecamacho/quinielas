@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140606180137) do
+ActiveRecord::Schema.define(version: 20140609171822) do
+
+  create_table "games", force: true do |t|
+    t.datetime "fecha"
+    t.integer  "goles_visita"
+    t.integer  "goles_local"
+    t.boolean  "jugado"
+    t.integer  "resultado"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "local_id"
+    t.integer  "visita_id"
+  end
 
   create_table "groups", force: true do |t|
     t.string   "nombre"

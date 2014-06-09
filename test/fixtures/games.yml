@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fecha: 2014-06-09 12:11:43
+  goles_visita: 1
+  goles_local: 1
+  jugado: false
+  resultado: 1
+
+two:
+  fecha: 2014-06-09 12:11:43
+  goles_visita: 1
+  goles_local: 1
+  jugado: false
+  resultado: 1
