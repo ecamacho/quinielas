@@ -16,8 +16,8 @@ if not camerun
 	camerun = Team.new nombre: 'Camerun', abreviatura: 'cmr'
 end
 
-suziza = Team.find_by abreviatura: 'sui'
-if not suziza
+suiza = Team.find_by abreviatura: 'sui'
+if not suiza
    suiza = Team.new nombre: 'Suiza', abreviatura: 'sui'
 end
 
@@ -74,6 +74,7 @@ end
 estados_unidos = Team.find_by abreviatura: 'usa'
 if not estados_unidos
 	estados_unidos = Team.new nombre: 'Estados Unidos', abreviatura: 'USA'
+end
 
 belgica = Team.find_by abreviatura: 'bel'
 if not belgica 
@@ -137,7 +138,7 @@ nigeria.save
 grupo_F.save
 
 grupo_G = Group.find_by nombre: 'Grupo G'
-if not group_G
+if not grupo_G
 	grupo_G = Group.new nombre: 'Grupo G'
 end
 alemania.group = grupo_G
@@ -153,7 +154,7 @@ grupo_G.save
 
 grupo_H = Group.find_by nombre: 'Grupo H'
 if not grupo_H
-	group_H = Group.new nombre: 'Grupo H'
+	grupo_H = Group.new nombre: 'Grupo H'
 end
 belgica.group = grupo_H
 argelia.group = grupo_H
@@ -289,7 +290,7 @@ partido_43 = Game.new fecha: fecha_partido_43, local:honduras, visita:suiza, gol
 end
 
 fecha_partido_44 = DateTime.parse("2014-06-25 17:00:00")
-partido_44 = Game.where(fecha: fecha_partido_44, local: ecuador, visita: francias).first
+partido_44 = Game.where(fecha: fecha_partido_44, local: ecuador, visita: francia).first
 if not partido_44
 partido_44 = Game.new fecha: fecha_partido_44, local:ecuador, visita:francia, goles_visita: 0, goles_local: 0, jugado: false, resultado: 0
 end
