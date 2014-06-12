@@ -45,8 +45,7 @@ australia = Team.new nombre: 'Australia', abreviatura: 'aus'
 end
 
 
-<<<<<<< HEAD
-=======
+
 #grupo C
 colombia = Team.find_by abreviatura: 'col'
 if not colombia
@@ -85,7 +84,7 @@ italia = Team.find_by abreviatura: 'ita'
 if not italia
 italia = Team.new nombre: 'Italia', abreviatura: 'ita'
 end
->>>>>>> origin/master
+
 suiza = Team.find_by abreviatura: 'sui'
 if not suiza
    suiza = Team.new nombre: 'Suiza', abreviatura: 'sui'
@@ -145,10 +144,9 @@ estados_unidos = Team.find_by abreviatura: 'usa'
 if not estados_unidos
 	estados_unidos = Team.new nombre: 'Estados Unidos', abreviatura: 'USA'
 end
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
+
+
 belgica = Team.find_by abreviatura: 'bel'
 if not belgica 
 	belgica = Team.new nombre: 'Bélgica', abreviatura: 'bel'
@@ -179,8 +177,12 @@ if not grupo_A
 end
 mexico.group = grupo_A
 camerun.group = grupo_A
+croacia.group = grupo_A
+brasil.group = grupo_A
 mexico.save
 camerun.save
+brasil.save
+croacia.save
 grupo_A.save
 
 
