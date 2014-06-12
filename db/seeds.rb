@@ -202,7 +202,7 @@ grupo_B.save
 
 grupo_C = Group.find_by nombre: 'Grupo C'
 if not grupo_C
-   grupo_C = Group.new nombre: 'Group C'
+   grupo_C = Group.new nombre: 'Grupo C'
 end
 colombia.group = grupo_C
 grecia.group = grupo_C
@@ -216,7 +216,7 @@ grupo_C.save
 
 grupo_D = Group.find_by nombre: 'Grupo D'
 if not grupo_D
-   grupo_D = Group.new nombre: 'Group D'
+   grupo_D = Group.new nombre: 'Grupo D'
 end
 uruguay.group = grupo_D
 costa_rica.group = grupo_D
