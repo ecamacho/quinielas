@@ -494,7 +494,7 @@ if not partido_9 = Game.where(fecha: fecha_partido_9, local:brasil, visita:mexic
 partido_9 = Game.new fecha: fecha_partido_9, local:brasil, visita:mexico, goles_visita: 0, goles_local: 0, jugado:false, resultado: 0
 end
 
-fecha_partido_10 = DateTime.parse("2014-06-18 13:00:00")
+fecha_partido_10 = DateTime.parse("2014-06-18 11:00:00")
 if not partido_10 = Game.where(fecha: fecha_partido_10, local:australia, visita:holanda).first
 partido_10 = Game.new fecha: fecha_partido_10, local:australia, visita:holanda, goles_visita: 0, goles_local: 0, jugado:false, resultado: 0
 end
