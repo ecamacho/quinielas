@@ -91,11 +91,12 @@
             <a href="#" class="list-group-item active">
               <strong>JORNADAS</strong> &nbsp<%= image_tag("banderas/balon.jpg", :alt=>"holanda", :width=>55, :heigth=>55)%>
             </a>
-            <a href="#" class="list-group-item">JORNADA 1</a>
-            <a href="#" class="list-group-item">JORNADA 2 </a>
-            <a href="#" class="list-group-item">JORNADA 3</a>
-            <a href="#" class="list-group-item">SEMI-FINAL</a>
-            <a href="#" class="list-group-item">FINAL</a>
+            
+            <% @jornadas.each do |jornada|%> 
+            <a href="/calendar/<%=jornada.id%>" class="list-group-item"> <%= jornada.fase %>
+
+            </a>
+            <%end%>
           </ul>
         </div>
       </div>
@@ -113,14 +114,14 @@
             <h4 class="text-right">Fecha <%= partidos_grupo_dia[1].first.fecha.strftime("%a %d/%m/%Y")%></h4>
           <tbody>
             <% partidos_grupo_dia[1].each do |partido| %>
-            <tr><td><%= partido.fecha.strftime("%H:%M") %></td><td><strong><%= partido.local.nombre %></strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<%= image_tag("banderas/mex.jpg", :alt=>"mexico", :width=>24, :heigth=>24)%>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<label>
+            <tr><td><%= partido.fecha.strftime("%H:%M") %></td><td><strong><%= partido.local.nombre %></strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<%= image_tag("banderas/#{partido.local.abreviatura}.jpg", :alt=>"mexico", :width=>24, :heigth=>24)%>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<label>
 
               <%= radio_button_tag(partido.id, "1", partido.resultado == 1)%>
               </label></td>
               <td><div class="radio pull-right">&nbsp&nbsp&nbsp<label>&nbsp&nbsp
 
                 <%= radio_button_tag(partido.id, "2", partido.resultado == 2)%></label></div></td>
-              <td><strong><%= partido.visita.nombre %></strong>&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp<%= image_tag("banderas/bra.jpg", :alt=>"croacaia", :width=>27, :heigth=>27)%>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<label>
+               <td><strong><%= partido.visita.nombre %></strong>&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp<%= image_tag("banderas/#{ partido.visita.abreviatura}.jpg", :alt=>"croacaia", :width=>27, :heigth=>27)%>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<label>
 
                 <%= radio_button_tag(partido.id, "3", partido.resultado == 3)%></lable></td></tr>
                <% end %>
