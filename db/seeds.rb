@@ -142,7 +142,7 @@ end
 
 estados_unidos = Team.find_by abreviatura: 'usa'
 if not estados_unidos
-	estados_unidos = Team.new nombre: 'Estados Unidos', abreviatura: 'USA'
+	estados_unidos = Team.new nombre: 'Estados Unidos', abreviatura: 'usa'
 end
 
 
