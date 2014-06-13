@@ -9,7 +9,7 @@
 
 mexico = Team.find_by abreviatura: 'mex' 
 if not mexico
- mexico = Team.new nombre: 'México', abreviatura: 'mex'  
+ mexico = Team.new nombre: 'México', abreviatura: 'mex'   
 end
 camerun = Team.find_by abreviatura: 'cmr'
 if not camerun
