@@ -53,5 +53,6 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  get 'calendar/:jornada' => 'calendar#index'
   get 'calendar' => 'calendar#index'
 end
