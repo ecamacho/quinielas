@@ -21,8 +21,6 @@ class CalendarController < ApplicationController
 		end
 		@partidos = partidos_hash.to_a.sort!
 
-
 		@jornadas = Stage.all
-
 	end
 end

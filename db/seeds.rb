@@ -173,7 +173,11 @@ if not grupo_A
 end
 mexico.group = grupo_A
 camerun.group = grupo_A
+brasil.group = grupo_A
+croacia.group= grupo_A
 mexico.save
+brasil.save
+croacia.save
 camerun.save
 grupo_A.save
 
