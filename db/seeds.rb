@@ -44,8 +44,6 @@ if not australia
 australia = Team.new nombre: 'Australia', abreviatura: 'aus'
 end
 
-
-
 #grupo C
 colombia = Team.find_by abreviatura: 'col'
 if not colombia
@@ -145,8 +143,6 @@ if not estados_unidos
 	estados_unidos = Team.new nombre: 'Estados Unidos', abreviatura: 'usa'
 end
 
-
-
 belgica = Team.find_by abreviatura: 'bel'
 if not belgica 
 	belgica = Team.new nombre: 'Bélgica', abreviatura: 'bel'
@@ -177,12 +173,12 @@ if not grupo_A
 end
 mexico.group = grupo_A
 camerun.group = grupo_A
-croacia.group = grupo_A
 brasil.group = grupo_A
+croacia.group= grupo_A
 mexico.save
-camerun.save
 brasil.save
 croacia.save
+camerun.save
 grupo_A.save
 
 
@@ -227,15 +223,6 @@ costa_rica.save
 inglaterra.save
 italia.save
 grupo_D.save
-
-
-
-
-
-
-
-
-
 
 
 grupo_E = Group.find_by nombre: 'Grupo E'
@@ -496,7 +483,7 @@ if not partido_9 = Game.where(fecha: fecha_partido_9, local:brasil, visita:mexic
 partido_9 = Game.new fecha: fecha_partido_9, local:brasil, visita:mexico, goles_visita: 0, goles_local: 0, jugado:false, resultado: 0
 end
 
-fecha_partido_10 = DateTime.parse("2014-06-18 11:00:00")
+fecha_partido_10 = DateTime.parse("2014-06-18 13:00:00")
 if not partido_10 = Game.where(fecha: fecha_partido_10, local:australia, visita:holanda).first
 partido_10 = Game.new fecha: fecha_partido_10, local:australia, visita:holanda, goles_visita: 0, goles_local: 0, jugado:false, resultado: 0
 end
