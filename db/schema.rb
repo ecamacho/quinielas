@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20140609184714) do
     t.integer  "stage_id"
   end
 
-  add_index "games", ["stage_id"], name: "index_games_on_stage_id"
+  add_index "games", ["stage_id"], name: "index_games_on_stage_id", using: :btree
 
   create_table "groups", force: true do |t|
     t.string   "nombre"
