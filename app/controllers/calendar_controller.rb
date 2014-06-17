@@ -23,22 +23,6 @@ class CalendarController < ApplicationController
 		
 		@jornadas = Stage.all
 
-
-<<<<<<< HEAD
 		@tabla = Game.where('stage_id=? and jugado=?',  1, true) 
-	
-
-=======
-
-		@tabla = Game.where('stage_id=? and jugado=?',  1, true) 
-	
-
-
-
-
-
-
-
->>>>>>> origin/master
 	end
 end
