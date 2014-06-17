@@ -86,7 +86,7 @@
         </div><br><br><br><br><br>
       <div class="row">
         <div class="col-sm-4 col-sm-2 ">
-         <div class="pull-left">
+         <div class="pull-right">
           <ul class="list-group ">
             <a href="#" class="list-group-item active">
               <strong>JORNADAS</strong> &nbsp<%= image_tag("banderas/balon.jpg", :alt=>"holanda", :width=>55, :heigth=>55)%>
@@ -106,7 +106,7 @@
           <thead>
             <th>Hora</th>
             <th>Local</th>
-            <th>Empate</th>
+            <th><center>Empate</center></th>
             <th> &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp &nbsp &nbspVisita</th>
           </thead>
           
@@ -114,16 +114,11 @@
             <h4 class="text-right">Fecha <%= partidos_grupo_dia[1].first.fecha.strftime("%a %d/%m/%Y")%></h4>
           <tbody>
             <% partidos_grupo_dia[1].each do |partido| %>
-            <tr><td><%= partido.fecha.strftime("%H:%M") %></td><td><strong><%= partido.local.nombre %></strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<%= image_tag("banderas/#{partido.local.abreviatura}.jpg", :alt=>"mexico", :width=>24, :heigth=>24)%>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<label>
+            <div style="text-aling: center;">
+            <tr><td><%= partido.fecha.strftime("%H:%M") %></td><td><strong><%= partido.local.nombre %></strong>&nbsp&nbsp&nbsp<%= image_tag("banderas/#{partido.local.abreviatura}.jpg",:alt=>"breviatura",:width=>25,:heigth=>25)%><label>&nbsp&nbsp&nbsp&nbsp&nbsp<%=radio_button_tag(partido.id, "1", partido.resultado == 1)%></label></td><td><div class="text-center" class="radio pull-right"><label><%= radio_button_tag(partido.id, "2", partido.resultado == 2)%></label></div></td>
+            </div>
 
-              <%= radio_button_tag(partido.id, "1", partido.resultado == 1)%>
-              </label></td>
-              <td><div class="radio pull-right">&nbsp&nbsp&nbsp<label>&nbsp&nbsp
-
-                <%= radio_button_tag(partido.id, "2", partido.resultado == 2)%></label></div></td>
-               <td><strong><%= partido.visita.nombre %></strong>&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp<%= image_tag("banderas/#{ partido.visita.abreviatura}.jpg", :alt=>"croacaia", :width=>27, :heigth=>27)%>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<label>
-
-                <%= radio_button_tag(partido.id, "3", partido.resultado == 3)%></lable></td></tr>
+              <td><strong><%= partido.visita.nombre %></strong>&nbsp&nbsp&nbsp<%= image_tag("banderas/#{ partido.visita.abreviatura}.jpg", :alt=>"abreviatura", :width=>25, :heigth=>25)%><label>&nbsp&nbsp&nbsp <%= radio_button_tag(partido.id, "3", partido.resultado == 3)%></lable></td></tr>
                <% end %>
                 </tbody>
               </table>
@@ -138,17 +133,18 @@
                 <a href="#" class="list-group-item active">
                   <strong>RESULTADOS AL MOMENTO</strong>&nbsp&nbsp&nbsp<%= image_tag("banderas/reloj.jpg", :alt=>"holanda", :width=>40, :heigth=>40)%>
                 </a>
+
                   
                 <a href="#" class="list-group-item">Brasil&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp vs&nbsp&nbspMexico&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp1-1&nbsp&nbsp40"</a>
+                  </a>
+            
+           
+
+                 <a href="#" class="list-group-item">Brasil&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp vs&nbsp&nbspMexico&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp1-1&nbsp&nbsp40"</a>               
+
                 <a href="#" class="list-group-item">Holanda&nbsp&nbsp&nbspvs&nbsp&nbspMexico&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp2-1&nbsp&nbspFIN</a>
                 <a href="#" class="list-group-item">Croacia&nbsp&nbsp&nbsp vs&nbsp Brasil&nbsp &nbsp&nbsp &nbsp&nbsp&nbsp2-3&nbsp&nbspFIN</a>
-                <a href="#" class="list-group-item">Portugal&nbsp&nbsp vs&nbsp España&nbsp&nbsp&nbsp&nbsp 2-3&nbsp&nbsp83"</a>
-                <a href="#" class="list-group-item">Alemania&nbsp&nbspvs&nbspuruguay&nbsp&nbsp&nbsp&nbsp&nbsp2-2&nbsp&nbsp73"</a>
-                <a href="#" class="list-group-item">Italia&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspvs&nbspEcuador&nbsp&nbsp&nbsp&nbsp3-1&nbsp&nbspFIN</a>
-                <a href="#" class="list-group-item">Inglaterra&nbsp&nbspvs&nbspChile&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp2-3&nbsp&nbsp57"</a>
-                <a href="#" class="list-group-item">Mexico&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspvs&nbspCamerun&nbsp&nbsp&nbsp2-3&nbsp&nbspFIN</a>
-                <a href="#" class="list-group-item">Brazil&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspvs&nbspCroacia&nbsp&nbsp&nbsp&nbsp&nbsp2-3&nbsp&nbspFIN</a>
-                <a href="#" class="list-group-item">Portugal&nbsp&nbsp&nbsp&nbspvs Jamaica&nbsp&nbsp&nbsp&nbsp 2-3&nbsp&nbspFIN</a>
+             
               </ul>
             </div>
           </div>
