@@ -27,5 +27,5 @@ test:
   port: 5432
 
 production:
-adapter:postgresql
-encoding: unicode
+  adapter: postgresql
+  encoding: unicode
