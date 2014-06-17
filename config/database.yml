@@ -1,3 +1,4 @@
+
 # SQLite version 3.x
 #   gem 'activerecord-jdbcsqlite3-adapter'
 #
@@ -26,5 +27,5 @@ test:
   port: 5432
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+adapter:postgresql
+encoding: unicode
