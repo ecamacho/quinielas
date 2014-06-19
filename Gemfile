@@ -27,7 +27,6 @@ gem 'tzinfo'
 gem 'tzinfo-data'
 gem 'activerecord-jdbcpostgresql-adapter'
 gem 'puma'
-
 gem 'activerecord-jdbc-adapter'
 gem 'jdbc-postgres'
 # Use ActiveModel has_secure_password
