@@ -28,6 +28,8 @@ gem 'tzinfo-data'
 gem 'activerecord-jdbcpostgresql-adapter'
 gem 'puma'
 
+gem 'activerecord-jdbc-adapter'
+gem 'jdbc-postgres'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
