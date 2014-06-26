@@ -55,4 +55,6 @@ Rails.application.routes.draw do
   #   end
   get 'calendar/:jornada' => 'calendar#index'
   get 'calendar' => 'calendar#index'
+  
+
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140609184714) do
+ActiveRecord::Schema.define(version: 20140624165555) do
 
   create_table "games", force: true do |t|
     t.datetime "fecha"
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20140609184714) do
     t.integer  "stage_id"
   end
 
-  add_index "games", ["stage_id"], name: "index_games_on_stage_id", using: :btree
+  add_index "games", ["stage_id"], name: "index_games_on_stage_id"
 
   create_table "groups", force: true do |t|
     t.string   "nombre"

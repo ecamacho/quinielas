@@ -89,6 +89,7 @@
          <div class="pull-right">
           <ul class="list-group ">
             <a href="#" class="list-group-item active">
+              <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
               <strong>JORNADAS</strong> &nbsp<%= image_tag("banderas/balon.jpg", :alt=>"holanda", :width=>55, :heigth=>55)%>
             </a>
             
@@ -144,6 +145,7 @@
               </ul>
             </div>
           </div>
+          
         
       <script src="http://code.jquery.com/jquery.js"></script>
     <!-- Todos los plugins JavaScript de Bootstrap (también puedes
