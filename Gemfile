@@ -30,6 +30,7 @@ gem 'activerecord-jdbcpostgresql-adapter'
 gem 'omniauth'
 gem 'omniauth-facebook', '1.4.0'
 
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
