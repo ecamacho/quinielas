@@ -1,5 +1,5 @@
 class CalendarController < ApplicationController
-	
+	before_filter :denegar_acceso, :unless => :current_user
 	def index
 		jornada = params["jornada"]
 		logger.info "jornada #{jornada}"
