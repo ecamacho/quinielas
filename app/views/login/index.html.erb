@@ -18,38 +18,31 @@
     <![endif]-->
 
   </head>
-  <body  >
-
-
-  	<div class="navbar navbar-default navbar-fixed-top">
-  		<div class="container">
-  			<div class="navbar-header">
+  <body >
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
           <a href="quinielas" class="navbar-brand">Home</a>
           <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main"></button>
-           <a class="navbar-brand" href="#"> <%=image_tag("banderas/mundial.jpg", :alt=>"image", :width=>150, :heigth=>80 )%> </a>
-         </div>
-       </div>
-     </div><br><br><br><br>
-   <div class= "container">
-   
-   <div id="user-widget">
-  <% if current_user %>
-    Welcome <strong><%= current_user.name %></strong>!
-    <%= link_to "Sign out", signout_path, id: "sign_out" %>
-  <% else %>
-    <%= link_to image_tag("banderas/facebook.jpg"),  "/auth/facebook", id: "sign_in" %>
-
-  <% end %>
-</div>
-
-
- </div>
+          <a class="navbar-brand" href="#"> <%=image_tag("banderas/mundial.jpg", :alt=>"image", :width=>150, :heigth=>80 )%> </a>
+        </div>
+      </div>
+    </div><br><br><br><br>
+    <center>
+      <div class= "container" id="user-widget">
+        <% if current_user %>
+        Welcome <strong><%= current_user.name %></strong>!
+        <%= link_to "Sign out", signout_path, id: "sign_out" %>
+        <% else %><div class="container">
+        <%= link_to image_tag("banderas/facebook.jpg"),  "/auth/facebook", id: "sign_in" %></div><% end %>
+        <br><br><br><br><br><a> <%=image_tag("banderas/copa.jpg", :alt=>"image", :width=>200, :heigth=>200 )%>
+      </div>
+    </center>
 
 
-       
-     
-        
-      <script src="http://code.jquery.com/jquery.js"></script>
+
+
+    <script src="http://code.jquery.com/jquery.js"></script>
     <!-- Todos los plugins JavaScript de Bootstrap (también puedes
     incluir archivos JavaScript individuales de los únicos plugins que utilices) --><script src="js/bootstrap.min.js"></script>
   </body>
