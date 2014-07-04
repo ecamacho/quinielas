@@ -61,24 +61,23 @@
               <li>
                 <a href="Ayuda">AYUDA</a>
               </li>
-            </>
-            <li>
-                 <% if current_user %><strong><%=current_user.nombre%></strong>
-                  <%= link_to "cerrar sesion", signout_path, id: "sign_out" %>
-                   <% else %>
-                   <%= link_to "Sing in with Facebook",  "/auth/facebook", id: "sign_in" %>
-                   <% end %>
-                 </li>
                   </ul>
+                  
             <ul class="nav navbar-nav navbar-right">
               <li class="active">
                 <a href="Invitar" target="_blank">INVITAR</a>
               </li>
+              
             </ul>
               <ul class="dropdown-menu" arial-labelledby="themens">
                 <li>
-                  <a href="Quiniela1">Quiniela 1</a>
-                </li>
+                <img class="_s0 headerTinymanPhoto _rw img" src="https://graph.facebook.com/<%= current_user.uid%>/picture?width=42&height=45">
+              </li>
+              <ul>
+                <li>
+                  <% if current_user %><strong><%=current_user.nombre%></strong><%= link_to "cerrar sesion", signout_path, id: "sign_out" %><% else %><%= link_to "Sing in with Facebook",  "/auth/facebook", id: "sign_in" %><% end %>
+                  <li>
+                    <a href="Quiniela1">Quiniela 1</a>
                 <li>
                   <a href="Qiniela2">Quiniela 2</a>
                 </li>
@@ -89,6 +88,8 @@
                 <li>
                   <a href="Nueva">Nueva quiniela</a>
                 </ul>
+                </li>
+                  </ul>
             </ul>
             </div>
           </div>

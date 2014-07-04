@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  usuario: MyString
+  quiniela: MyString
+  id_quiniela: 
+  usuario_id: 
+  puntos: 
+
+two:
+  usuario: MyString
+  quiniela: MyString
+  id_quiniela: 
+  usuario_id: 
+  puntos: 

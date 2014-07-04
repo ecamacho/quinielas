@@ -27,8 +27,5 @@ class CalendarController < ApplicationController
 		@tabla = Game.where('stage_id=? and jugado=?',  1, true) 
 
 
-		@tabla = Game.where('stage_id=? and jugado=?',  1, true) 
-
-
 	end
 end

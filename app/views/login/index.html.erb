@@ -32,7 +32,7 @@
     <center>
       <div class= "container" id="user-widget">
         <% if current_user %>
-        Welcome <strong><%= current_user.name %></strong>!
+        Welcome <strong><%= current_user.nombre %></strong>!
         <%= link_to "Sign out", signout_path, id: "sign_out" %>
         <% else %><div class="container">
         <%= link_to image_tag("banderas/facebook.jpg"),  "/auth/facebook", id: "sign_in" %></div><% end %>
@@ -40,21 +40,6 @@
       </div>
     </center>
 
-           <a class="navbar-brand" href="#"> <%=image_tag("banderas/mundial.jpg", :alt=>"image", :width=>150, :heigth=>80 )%> </a>
-         </div>
-       </div>
-     </div><br><br><br><br>
-   <div class= "container">
-   
-   <div id="user-widget">
-  <% if current_user %>
-    Welcome <strong><%=current_user.nombre%></strong>!
-    <%= link_to "Sign out", signout_path, id: "sign_out" %>
-  <% else %>
-    <%= link_to image_tag("banderas/facebook.jpg"),  "/auth/facebook", id: "sign_in" %>
-
-  <% end %>
-</div>
 
 
 
