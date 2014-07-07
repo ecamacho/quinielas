@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  creador: MyString
+  jugadores: 
+  id_quiniela: 
+
+two:
+  nombre: MyString
+  creador: MyString
+  jugadores: 
+  id_quiniela: 

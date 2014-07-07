@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140630173108) do
+ActiveRecord::Schema.define(version: 20140704180702) do
 
   create_table "games", force: true do |t|
     t.datetime "fecha"
@@ -30,6 +30,14 @@ ActiveRecord::Schema.define(version: 20140630173108) do
 
   create_table "groups", force: true do |t|
     t.string   "nombre"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "quinielas", force: true do |t|
+    t.string   "nombre"
+    t.string   "creador"
+    t.integer  "id_quiniela"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -56,6 +64,16 @@ ActiveRecord::Schema.define(version: 20140630173108) do
     t.string   "avatar"
     t.string   "oauth_token"
     t.datetime "oauth_expires_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "usuario_quinielas", force: true do |t|
+    t.string   "usuario"
+    t.string   "quiniela"
+    t.integer  "id_quiniela"
+    t.integer  "usuario_id"
+    t.integer  "puntos"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

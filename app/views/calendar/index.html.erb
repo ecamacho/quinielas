@@ -61,15 +61,28 @@
               <li>
                 <a href="Ayuda">AYUDA</a>
               </li>
-            </ul>
+                  </ul>
+                  
             <ul class="nav navbar-nav navbar-right">
               <li class="active">
+
                 <a href="Invitar" target="_blank">INVITAR</a> 
                 <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><img class="_s0 headerTinymanPhoto _rw img" src="http://graph.facebook.com/<%=current_user.uid%>/picture", width="25", heigth="25"%>&nbsp&nbsp<strong><%= current_user.nombre %></strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <b class="caret"></b></a>
+
+                <a href="Invitar" target="_blank">INVITAR</a>
+              </li>
+              
+            </ul>
+
               <ul class="dropdown-menu" arial-labelledby="themens">
                 <li>
-                  <a href="Quiniela1">Quiniela 1</a>
-                </li>
+                <img class="_s0 headerTinymanPhoto _rw img" src="https://graph.facebook.com/<%= current_user.uid%>/picture?width=42 height=45">
+              </li>
+              <ul>
+                <li>
+                  <% if current_user %><strong><%=current_user.nombre%></strong><%= link_to "cerrar sesion", signout_path, id: "sign_out" %><% else %><%= link_to "Sing in with Facebook",  "/auth/facebook", id: "sign_in" %><% end %>
+                  <li>
+                    <a href="Quiniela1">Quiniela 1</a>
                 <li>
                   <a href="Qiniela2">Quiniela 2</a>
                 </li>
@@ -84,6 +97,9 @@
                     <a href="signout">Salir</a>
                   </li>
                 </ul>
+
+                </li>
+                  </ul>
 
             </ul>
             </div>
