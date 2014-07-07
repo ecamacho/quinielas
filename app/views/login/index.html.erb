@@ -16,7 +16,6 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
   </head>
   <body >
     <div class="navbar navbar-default navbar-fixed-top">
@@ -39,31 +38,18 @@
         <br><br><br><br><br><a> <%=image_tag("banderas/copa.jpg", :alt=>"image", :width=>200, :heigth=>200 )%>
       </div>
     </center>
-
-
-         
-         </div>
-       </div>
-     </div><br><br><br><br>
-   <div class= "container">
-   
-   <div id="user-widget">
-  <% if current_user %>
-    
-  
-  <% else %>
-    
-
-  <% end %>
+  </div>
 </div>
-
-
-
-
-
-
-    <script src="http://code.jquery.com/jquery.js"></script>
-    <!-- Todos los plugins JavaScript de Bootstrap (también puedes
-    incluir archivos JavaScript individuales de los únicos plugins que utilices) --><script src="js/bootstrap.min.js"></script>
-  </body>
-  </html>
+</div><br><br><br><br>
+<div class= "container">
+   <div id="user-widget">
+    <% if current_user %>
+    <% else %>
+    <% end %>
+  </div>
+  <script src="http://code.jquery.com/jquery.js"></script>
+  <!-- Todos los plugins JavaScript de Bootstrap (también puedes
+  incluir archivos JavaScript individuales de los únicos plugins que utilices) --><script src="js/bootstrap.min.js">
+  </script>
+</body>
+</html>
