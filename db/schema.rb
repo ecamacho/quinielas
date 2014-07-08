@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140704180702) do
+ActiveRecord::Schema.define(version: 20140708190858) do
 
   create_table "games", force: true do |t|
     t.datetime "fecha"
@@ -36,11 +36,12 @@ ActiveRecord::Schema.define(version: 20140704180702) do
 
   create_table "quinielas", force: true do |t|
     t.string   "nombre"
-    t.string   "creador"
-    t.integer  "id_quiniela"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
+
+  add_index "quinielas", ["user_id"], name: "index_quinielas_on_user_id"
 
   create_table "stages", force: true do |t|
     t.string   "fase"
@@ -69,13 +70,14 @@ ActiveRecord::Schema.define(version: 20140704180702) do
   end
 
   create_table "usuario_quinielas", force: true do |t|
-    t.string   "usuario"
-    t.string   "quiniela"
-    t.integer  "id_quiniela"
-    t.integer  "usuario_id"
     t.integer  "puntos"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
+    t.integer  "quiniela_id"
   end
+
+  add_index "usuario_quinielas", ["quiniela_id"], name: "index_usuario_quinielas_on_quiniela_id"
+  add_index "usuario_quinielas", ["user_id"], name: "index_usuario_quinielas_on_user_id"
 
 end
