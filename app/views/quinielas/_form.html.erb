@@ -1,0 +1,21 @@
+<%= form_for(@quiniela) do |f| %>
+
+  <% if @quiniela.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@quiniela.errors.count, "error") %> prohibited this quiniela from being saved:</h2>
+
+      <ul>
+      <% @quiniela.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<p>
+  <%= f.label :nombre %><br/>
+  <%= f.text_field :nombre, autofocus:true %>
+</p>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

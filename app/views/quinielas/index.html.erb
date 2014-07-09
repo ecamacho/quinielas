@@ -1,0 +1,23 @@
+<h1>Listing quinielas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @quinielas.each do |quiniela| %>
+      <tr>
+        <td><%= link_to 'Show', quiniela %></td>
+        <td><%= link_to 'Edit', edit_quiniela_path(quiniela) %></td>
+        <td><%= link_to 'Destroy', quiniela, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Quiniela', new_quiniela_path %>

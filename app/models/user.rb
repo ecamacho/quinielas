@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  belongs_to :quiniela
+ 
   has_many :usuario_quinielas
   has_many :quinielas, through: :usuario_quinielas
 	

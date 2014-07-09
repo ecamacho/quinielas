@@ -12,10 +12,6 @@ class ApplicationController < ActionController::Base
   	redirect_to url_for(:controller => :login, :action => :index)
   end
 
-  
-  def denegar_acceso
-  	redirect_to url_for(:controller => :login, :action => :index)
-  end
   helper_method :current_user
   helper_method :denegar_acceso
 

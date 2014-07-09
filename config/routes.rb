@@ -61,5 +61,5 @@ Rails.application.routes.draw do
   match 'auth/:provider/callback', to: 'login#create', via: [:get, :post]
   match 'auth/failure', to: redirect('/'), via: [:get, :post]
   match 'signout', to: 'login#destroy', as: 'signout', via: [:get, :post]
-
+  resources :quinielas
 end
