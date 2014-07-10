@@ -11,7 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140708190858) do
+ActiveRecord::Schema.define(version: 20140710190052) do
+
+  create_table "apuesta", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "quiniela_id"
+    t.integer  "stage_id"
+    t.integer  "resultado"
+    t.integer  "puntos"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "game_id"
+  end
+
+  add_index "apuesta", ["game_id"], name: "index_apuesta_on_game_id"
+  add_index "apuesta", ["quiniela_id"], name: "index_apuesta_on_quiniela_id"
+  add_index "apuesta", ["stage_id"], name: "index_apuesta_on_stage_id"
+  add_index "apuesta", ["user_id"], name: "index_apuesta_on_user_id"
 
   create_table "games", force: true do |t|
     t.datetime "fecha"

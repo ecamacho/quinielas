@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  quiniela_id: 
+  stage_id: 
+  match_id: 
+  resultado: 1
+  puntos: 1
+
+two:
+  user_id: 
+  quiniela_id: 
+  stage_id: 
+  match_id: 
+  resultado: 1
+  puntos: 1
