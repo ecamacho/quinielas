@@ -1,8 +1,10 @@
+
 <div class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main"></button>
           <a class="navbar-brand" href="#"> <%=image_tag("banderas/mundial.jpg", :alt=>"image", :width=>150, :heigth=>80 )%> </a>
+<<<<<<< HEAD
         </div>
        
             <ul class="nav navbar-nav navbar-right">
@@ -25,4 +27,27 @@
 <%= render 'form' %>
 <br>
 <button type="button" class="btn btn-default btn-sm"><%= link_to 'Back', quinielas_path %></button>
+=======
+      </div>
+         <ul class="nav navbar-nav navbar-right">
+         	<li class="active">
+         		<a href="Invitar" target="_blank">INVITAR</a> 
+         		<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><img class="_s0 headerTinymanPhoto _rw img" src="http://graph.facebook.com/<%=current_user.uid%>/picture", width="25", heigth="25"%>&nbsp&nbsp<strong><%= current_user.nombre %></strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+         		</div>
+         	</div>
+         </div>
+         <br><br><br><br><br><br><br>
+         <center>
+         	<h1><p class= "text-primary"><strong>Nueva Quiniela</strong></p></h1>
+         	<%=  render 'form' %><br>
+         	&nbsp&nbsp&nbsp
+         	<%= link_to 'Back', quinielas_path %><br>
+         </center>
+     </div>
+ </div>
+>>>>>>> origin/master
 </div>
+
+
+
+
