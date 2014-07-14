@@ -38,6 +38,7 @@ class QuinielasController < ApplicationController
         usuario_quiniela.save
         #format.html { redirect_to @quiniela, notice: 'Quiniela was successfully created.' }
         
+        session[:quiniela_id] = @quiniela.id
         #format.json { render :show, status: :created, location: @quiniela }
         redirect_to url_for(:controller => :calendar, :action => :index) 
       else

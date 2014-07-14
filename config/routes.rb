@@ -57,7 +57,7 @@ Rails.application.routes.draw do
   get '/' => 'login#index'
   get 'calendar/:jornada' => 'calendar#index'
   get 'calendar' => 'calendar#index'
-
+  post 'calendar' => 'calendar#save'
   match 'auth/:provider/callback', to: 'login#create', via: [:get, :post]
   match 'auth/failure', to: redirect('/'), via: [:get, :post]
   match 'signout', to: 'login#destroy', as: 'signout', via: [:get, :post]
