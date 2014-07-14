@@ -92,21 +92,6 @@
                 <ul>
                   <li>
                     <% if current_user %><strong><%=current_user.nombre%></strong><%= link_to "cerrar sesion", signout_path, id: "sign_out" %><% else %><%= link_to "Sing in with Facebook",  "/auth/facebook", id: "sign_in" %><% end %>
-                    <li>
-                      <a href="Quiniela1">Quiniela 1</a>
-                      <li>
-                        <a href="Qiniela2">Quiniela 2</a>
-                      </li>
-                      <li>
-                        <a href="Quinielaempresa">Quniela Empresa</a>
-                      </li>
-                      <li class="divider"></li>
-                      <li>
-                        <a href="Nueva">Nueva quiniela</a>
-                        <li class="divider"></li>
-                        <li>
-                          <a href="signout">Salir</a>
-                        </li>
                       </ul>
                     </li>
                   </ul>
@@ -120,7 +105,8 @@
                 <ul class="list-group ">
                   <a href="#" class="list-group-item active">
                     <strong>JORNADAS</strong> &nbsp<%= image_tag("banderas/balon.jpg", :alt=>"holanda", :width=>55, :heigth=>55)%>
-                  </a><% @jornadas.each do |jornada|%> <a href="/calendar/<%=jornada.id%>" class="list-group-item"> <%= jornada.fase %></a><%end%>
+                  </a>
+                  <% @jornadas.each do |jornada|%> <a href="/calendar/<%=jornada.id%>" class="list-group-item"> <%= jornada.fase %></a><%end%>
                 </ul>
               </div>
             </div>
