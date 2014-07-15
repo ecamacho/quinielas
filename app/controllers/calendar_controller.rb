@@ -27,13 +27,25 @@ class CalendarController < ApplicationController
 				partidos_hash[llave] = [partido]
 			end
 			end
+
+
+
+
+
+
+
+
+
 			@partidos = partidos_hash.to_a.sort!
 		
 			@jornadas = Stage.all
 			@quinielas = Quiniela.all
 
 
-			@tabla = Game.where('stage_id=? and jugado=?',  1, true) 
+			@tabla = Game.where('stage_id=? and jugado=?',  1, true)
+			@quinielass = Apuesta.where('user_id=? and quiniela_id=? and stage_id=?', @current_user.id, current_quiniela.id, fase.id)
+			puts "***************************"
+			puts "imprime #{@quinielass}"
 		end
 
 	end
