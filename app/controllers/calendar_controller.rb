@@ -10,6 +10,7 @@ class CalendarController < ApplicationController
 			jornada = params["jornada"]
 			quiniela_id = params["quiniela"]
 			logger.info "jornada #{jornada}"
+
 			
 			if not quiniela_id 
 				quiniela_id =@current_user.quinielas.first.id
@@ -22,6 +23,14 @@ class CalendarController < ApplicationController
 			end
 			puts "____________________________"
 			puts "imprime #{quiniela_id}"
+
+			puts "imprime #{current_quiniela}"
+			
+			if not jornada
+				jornada = 1
+			end
+
+
 			session[:jornada_id] = jornada
 			fase = Stage.find_by id: jornada 
 			logger.info "fase: #{fase.inspect}"
@@ -79,7 +88,6 @@ class CalendarController < ApplicationController
 
 	end
 	def save
-		
 		puts "-----------------------------------------"
 		fase=Stage.find_by id:session[:jornada_id]
 		params.each do |key, value|
